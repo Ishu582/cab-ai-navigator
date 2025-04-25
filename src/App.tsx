@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -8,6 +7,7 @@ import Index from "./pages/Index";
 import Services from "./pages/Services";
 import Predictions from "./pages/Predictions";
 import NotFound from "./pages/NotFound";
+import Tracking from "./pages/Tracking";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +21,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/predictions" element={<Predictions />} />
+          <Route path="/services/tracking" element={<Tracking />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

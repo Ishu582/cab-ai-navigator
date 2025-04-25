@@ -9,7 +9,75 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      [_ in never]: never
+      booking_patterns: {
+        Row: {
+          common_destination: string | null
+          common_pickup: string | null
+          day_of_week: number | null
+          hour_of_day: number | null
+          id: string
+          prediction_confidence: number | null
+          updated_at: string
+          user_id: string | null
+        }
+        Insert: {
+          common_destination?: string | null
+          common_pickup?: string | null
+          day_of_week?: number | null
+          hour_of_day?: number | null
+          id?: string
+          prediction_confidence?: number | null
+          updated_at?: string
+          user_id?: string | null
+        }
+        Update: {
+          common_destination?: string | null
+          common_pickup?: string | null
+          day_of_week?: number | null
+          hour_of_day?: number | null
+          id?: string
+          prediction_confidence?: number | null
+          updated_at?: string
+          user_id?: string | null
+        }
+        Relationships: []
+      }
+      cab_bookings: {
+        Row: {
+          booking_time: string
+          created_at: string
+          destination: string
+          fare: number | null
+          id: string
+          pickup_location: string
+          scheduled_time: string
+          status: string
+          user_id: string | null
+        }
+        Insert: {
+          booking_time?: string
+          created_at?: string
+          destination: string
+          fare?: number | null
+          id?: string
+          pickup_location: string
+          scheduled_time: string
+          status?: string
+          user_id?: string | null
+        }
+        Update: {
+          booking_time?: string
+          created_at?: string
+          destination?: string
+          fare?: number | null
+          id?: string
+          pickup_location?: string
+          scheduled_time?: string
+          status?: string
+          user_id?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
